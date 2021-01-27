@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  tcptunnel:
+    container_name: tcptunnel
+    build:
+      context: .
+    network_mode: host
+    environment:
+      env_file: .env
+    restart: unless-stopped
