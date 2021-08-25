@@ -4,10 +4,9 @@ services:
     container_name: tcptunnel
     build:
       context: .
-      args:
-        http_proxy: http://172.17.0.1:8889
-        https_proxy: http://172.17.0.1:8889
+      #args:
+      #  http_proxy: http://172.17.0.1:8889
+      #  https_proxy: http://172.17.0.1:8889
     network_mode: host
-    environment:
-      env_file: .env
+    env_file: .env
     restart: unless-stopped
